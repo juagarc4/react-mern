@@ -1,7 +1,6 @@
 // Ternary Operator Condition
 
-
-const active = true;
+const active = true
 
 // let msg = '';
 //
@@ -17,6 +16,6 @@ const active = true;
 // const msg = ( active ) ? 'Active' : null;
 
 // Alternative. Quicker
-const msg = active && 'Activo';
+const msg = active && 'Activo'
 
-console.log(msg);
+console.log(msg)

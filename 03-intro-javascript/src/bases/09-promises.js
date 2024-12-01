@@ -1,5 +1,7 @@
-// // Promises
-import {getHeroeById} from "./bases/08-import-export";
+// Promises
+// Promises are by default async and will be executed
+// after all sync code has been executed.
+import { getHeroeById } from './bases/08-import-export'
 //
 // const promise = new Promise( (resolve, reject) => {
 //     setTimeout( () => {
@@ -21,25 +23,22 @@ import {getHeroeById} from "./bases/08-import-export";
 
 // Task 2: Manage catch in promise
 const getHeroeByIdAsync = (id) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            // Task: make getHeroeById usable by exporting/importing it.
-            const heroe = getHeroeById(id);
-            if ( typeof heroe === 'undefined' ) {
-                reject('Heroe not found');
-            } else {
-                resolve(heroe);
-            }
-
-        }, 2000)
-    });
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // Task: make getHeroeById usable by exporting/importing it.
+      const heroe = getHeroeById(id)
+      if (typeof heroe === 'undefined') {
+        reject('Heroe not found')
+      } else {
+        resolve(heroe)
+      }
+    }, 2000)
+  })
 }
 
 // Task 3: Transform "then" to use the same syntax as catch
 // getHeroeByIdAsync(8)
 //     .then(heroe => console.log('Heroe', heroe))
-//     .catch( console.warn);
+//     .catch( err => console.warn(err));
 
-getHeroeByIdAsync(4)
-    .then(console.log)
-    .catch(console.warn)
+getHeroeByIdAsync(4).then(console.log).catch(console.warn)

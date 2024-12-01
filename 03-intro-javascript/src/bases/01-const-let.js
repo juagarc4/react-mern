@@ -1,16 +1,16 @@
 // Variables and Constants
 
-const name = 'Raul';
-const surname = 'Garcia';
+const firstname = 'Raul'
+const surname = 'Garcia'
 
-let cubeValue = 5;
+let cubeValue = 5
 
-console.log(name, surname, cubeValue);
+console.log(firstname, surname, cubeValue)
 
-if ( 1 ) {
-    const name = 'Robert';
-    let cubeValue = 6;
-    console.log(name, cubeValue);
+if (1) {
+  const firstname = 'Robert'
+  let cubeValue = 6
+  console.log(firstname, cubeValue)
 }
 
-console.log(cubeValue);
+console.log(cubeValue)
