@@ -1,1 +1,5 @@
 .history
+
+# IDEs
+.idea
+.vscode
