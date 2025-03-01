@@ -2,7 +2,6 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 
 export const CounterApp = ({ value = 0 }) => {
-  console.log('Render')
   const [counter, setCounter] = useState(value)
   const handleClick = () => setCounter(counter + 1)
   const handleSubtract = () => setCounter(counter - 1)
@@ -13,7 +12,9 @@ export const CounterApp = ({ value = 0 }) => {
       <h2> {counter} </h2>
       <button onClick={handleClick}>+1</button>
       <button onClick={handleSubtract}>-1</button>
-      <button onClick={handleReset}>Reset</button>
+      <button aria-label='btn-reset' onClick={handleReset}>
+        Reset
+      </button>
     </>
   )
 }

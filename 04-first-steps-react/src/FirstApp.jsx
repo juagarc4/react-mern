@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 
-export const FirstApp = ({ title = 'No title', subtitle = 'No subtitle', name = 'Raul' }) => {
+export const FirstApp = ({ title = 'There is no title', subtitle = 'There is no subtitle', name = 'Raul' }) => {
   return (
     <>
-      <h1>{title}</h1>
+      <h1 data-testid='test-title'>{title}</h1>
       <h2>{subtitle}</h2>
       <p>{name}</p>
     </>
